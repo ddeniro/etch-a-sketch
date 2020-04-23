@@ -15,7 +15,8 @@ const drawGrid = (gridSize) => {
         grid.appendChild(square).className = 'square';
 
         square.addEventListener('mouseover', () => {
-            square.style.setProperty('background-color', 'green');
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            square.style.setProperty('background-color', `#${randomColor}`);
         })
     };
 };
